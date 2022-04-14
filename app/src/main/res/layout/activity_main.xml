@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/et_text"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="6dp"
+        android:gravity="top"
+        android:hint="Write to Internal Storage..."
+        android:textAlignment="gravity"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        app:layout_constraintStart_toStartOf="@+id/et_text"
+        app:layout_constraintTop_toBottomOf="@+id/et_text" />
+
+    <Button
+        android:id="@+id/btn_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="Read"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_save"
+        app:layout_constraintStart_toEndOf="@+id/btn_save"
+        app:layout_constraintTop_toTopOf="@+id/btn_save" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="clear"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_read"
+        app:layout_constraintStart_toEndOf="@+id/btn_read"
+        app:layout_constraintTop_toTopOf="@+id/btn_read" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:text="update"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_read"
+        app:layout_constraintEnd_toEndOf="@+id/et_text"
+        app:layout_constraintStart_toEndOf="@+id/btn_clear"
+        app:layout_constraintTop_toTopOf="@+id/btn_read" />
+
+    <Button
+        android:id="@+id/btn_delete_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="6dp"
+        android:layout_marginStart="8dp"
+        android:text="delete file"
+        app:layout_constraintBottom_toTopOf="@+id/tv_text"
+        app:layout_constraintEnd_toEndOf="@+id/btn_save"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="@+id/btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/btn_save"
+        app:layout_constraintVertical_bias="0.434" />
+
+
+    <Button
+        android:id="@+id/btn_save_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="Save Image"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_delete_file"
+        app:layout_constraintStart_toEndOf="@+id/btn_delete_file"
+        app:layout_constraintTop_toTopOf="@+id/btn_delete_file"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="6dp"
+        android:gravity="top"
+        android:hint="Read from Internal Storage"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
